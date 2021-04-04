@@ -4,11 +4,11 @@ from typing import List
 
 
 class Petstore:
-    def __init__(self, domen='petstore.swagger.io', proto='https', version=2):
-        self.domen = domen
+    def __init__(self, domain='petstore.swagger.io', proto='https', version=2):
+        self.domain = domain
         self.proto = proto
         self.version = version
-        self.base_url = f'{self.proto}://{self.domen}/v{version}'
+        self.base_url = f'{self.proto}://{self.domain}/v{version}'
 
     def get_url(self, element):
         return '/'.join([self.base_url, element])
